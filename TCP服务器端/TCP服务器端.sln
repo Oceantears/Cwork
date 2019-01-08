@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "数据转换成字节数组
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL数据库操作", "MySQL数据库操作\MySQL数据库操作.csproj", "{92C44E16-E168-4771-A584-C048BE2E2910}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "游戏服务器端", "游戏服务器端\游戏服务器端.csproj", "{FF8236BC-4136-417E-AED5-7395F7E9D88D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{92C44E16-E168-4771-A584-C048BE2E2910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92C44E16-E168-4771-A584-C048BE2E2910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92C44E16-E168-4771-A584-C048BE2E2910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF8236BC-4136-417E-AED5-7395F7E9D88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF8236BC-4136-417E-AED5-7395F7E9D88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF8236BC-4136-417E-AED5-7395F7E9D88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF8236BC-4136-417E-AED5-7395F7E9D88D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
