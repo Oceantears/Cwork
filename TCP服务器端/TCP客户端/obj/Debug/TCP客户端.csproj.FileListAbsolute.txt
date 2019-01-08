@@ -1,0 +1,7 @@
+D:\Cwork\TCP服务器端\TCP客户端\bin\Debug\TCP客户端.exe.config
+D:\Cwork\TCP服务器端\TCP客户端\bin\Debug\TCP客户端.exe
+D:\Cwork\TCP服务器端\TCP客户端\bin\Debug\TCP客户端.pdb
+D:\Cwork\TCP服务器端\TCP客户端\obj\Debug\TCP客户端.csprojAssemblyReference.cache
+D:\Cwork\TCP服务器端\TCP客户端\obj\Debug\TCP客户端.csproj.CoreCompileInputs.cache
+D:\Cwork\TCP服务器端\TCP客户端\obj\Debug\TCP客户端.exe
+D:\Cwork\TCP服务器端\TCP客户端\obj\Debug\TCP客户端.pdb

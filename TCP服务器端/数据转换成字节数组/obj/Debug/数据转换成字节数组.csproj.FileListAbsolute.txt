@@ -1,0 +1,7 @@
+D:\Cwork\TCP服务器端\数据转换成字节数组\bin\Debug\数据转换成字节数组.exe.config
+D:\Cwork\TCP服务器端\数据转换成字节数组\bin\Debug\数据转换成字节数组.exe
+D:\Cwork\TCP服务器端\数据转换成字节数组\bin\Debug\数据转换成字节数组.pdb
+D:\Cwork\TCP服务器端\数据转换成字节数组\obj\Debug\数据转换成字节数组.csprojAssemblyReference.cache
+D:\Cwork\TCP服务器端\数据转换成字节数组\obj\Debug\数据转换成字节数组.csproj.CoreCompileInputs.cache
+D:\Cwork\TCP服务器端\数据转换成字节数组\obj\Debug\数据转换成字节数组.exe
+D:\Cwork\TCP服务器端\数据转换成字节数组\obj\Debug\数据转换成字节数组.pdb
