@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySQL数据库操作", "MyS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "游戏服务器端", "游戏服务器端\游戏服务器端.csproj", "{FF8236BC-4136-417E-AED5-7395F7E9D88D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{F463EBA9-DC2F-4341-8438-817D66B43C4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FF8236BC-4136-417E-AED5-7395F7E9D88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF8236BC-4136-417E-AED5-7395F7E9D88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF8236BC-4136-417E-AED5-7395F7E9D88D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F463EBA9-DC2F-4341-8438-817D66B43C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F463EBA9-DC2F-4341-8438-817D66B43C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F463EBA9-DC2F-4341-8438-817D66B43C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F463EBA9-DC2F-4341-8438-817D66B43C4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
