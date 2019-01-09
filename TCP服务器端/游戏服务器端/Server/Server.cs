@@ -12,6 +12,7 @@ namespace GameServer.Server
     {
         private IPEndPoint ipEndPoint;
         private Socket serverSocket;
+        private List<Client> clientlList;
 
         public Server(){      }
 
@@ -36,6 +37,17 @@ namespace GameServer.Server
         private void AcceptCallBack(IAsyncResult ar)
         {
             Socket clientSocket = serverSocket.EndAccept(ar);
+            Client client=new Client(clientSocket,this);
+            client.Start();
+            clientlList.Add(client);
+        }
+
+        public void RemoveClient(Client client)
+        {
+            lock (clientlList)
+            {
+                clientlList.Remove(client);
+            }
         }
     }
 }
