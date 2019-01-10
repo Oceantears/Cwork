@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
+using Common;
 
-namespace GameServer.Server
+namespace GameServer.Servers
 {
     class Client
     {
@@ -35,7 +36,7 @@ namespace GameServer.Server
                     Close();
                 }
 
-                msg.ReadMessage(count);
+                msg.ReadMessage(count,OnProcessMessage);
                 Start();
             }
             catch (Exception e)
@@ -43,7 +44,11 @@ namespace GameServer.Server
                 Console.WriteLine(e);
                 Close();
             }
+        }
 
+        private void OnProcessMessage(RequestCode requestCode,ActionCode actionCode,string data)
+        {
+            server.HandleRequest(requestCode,actionCode,data,this);
         }
 
         private void Close()

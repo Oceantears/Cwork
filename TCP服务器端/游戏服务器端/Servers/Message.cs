@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common;
 
-namespace GameServer.Server
+namespace GameServer.Servers
 {
     class Message
     {
@@ -34,7 +35,7 @@ namespace GameServer.Server
         /// <summary>
         /// 解析数据或者叫做读取数据
         /// </summary>
-        public void ReadMessage(int newDataAmount)
+        public void ReadMessage(int newDataAmount,Action<RequestCode,ActionCode,string> processDataCallBack)
         {
             startIndex += newDataAmount;
             while (true)
@@ -43,10 +44,14 @@ namespace GameServer.Server
                 int count = BitConverter.ToInt32(data, 0);
                 if ((startIndex - 4) >= count)
                 {
-                    Console.WriteLine(startIndex);
-                    Console.WriteLine(count);
-                    string s = Encoding.UTF8.GetString(data, 4, count);
-                    Console.WriteLine("解析出一条数据：" + s);
+                    //Console.WriteLine(startIndex);
+                    //Console.WriteLine(count);
+                    //string s = Encoding.UTF8.GetString(data, 4, count);
+                    //Console.WriteLine("解析出一条数据：" + s);
+                    RequestCode requestCode = (RequestCode) BitConverter.ToInt32(data, 4);
+                    ActionCode actionCode = (ActionCode)BitConverter.ToInt32(data, 8);
+                    string s = Encoding.UTF8.GetString(data, 12, count-8);
+                    processDataCallBack(requestCode, actionCode, s);
                     Array.Copy(data, count + 4, data, 0, startIndex - 4 - count);
                     startIndex -= (count + 4);
                 }

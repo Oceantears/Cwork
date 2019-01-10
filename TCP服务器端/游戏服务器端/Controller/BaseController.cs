@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common;
+using GameServer.Servers;
 
 namespace GameServer.Controller
 {
@@ -11,7 +12,15 @@ namespace GameServer.Controller
     {
         RequestCode requestCode = RequestCode.None;
 
-        public virtual void DefaltHandle() { }
+        public RequestCode RequestCode
+        {
+            get { return requestCode; }
+        }
+
+        public virtual string DefaltHandle(string data,Client client,Server server)
+        {
+            return null;
+        }
 
     }
 }
