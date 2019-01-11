@@ -55,6 +55,7 @@
     <Compile Include="Servers\Client.cs" />
     <Compile Include="Servers\Message.cs" />
     <Compile Include="Servers\Server.cs" />
+    <Compile Include="Tool\ConnHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -62,11 +63,10 @@
   <ItemGroup>
     <Folder Include="DAO\" />
     <Folder Include="Model\" />
-    <Folder Include="Tool\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{f463eba9-dc2f-4341-8438-817d66b43c4a}</Project>
+      <Project>{471e10b0-f168-42ce-8396-be7061a9b260}</Project>
       <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>

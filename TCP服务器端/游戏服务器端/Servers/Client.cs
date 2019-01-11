@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
 using Common;
+using MySql.Data.MySqlClient;
+using GameServer.Tool;
 
 namespace GameServer.Servers
 {
@@ -13,12 +15,15 @@ namespace GameServer.Servers
         private Socket clientSocket;
         private Server server;
         private Message msg=new Message();
+        private MySqlConnection mySqlConn;
+
         public Client() { }
 
         public Client(Socket clientSocket,Server server)
         {
             this.clientSocket = clientSocket;
             this.server = server;
+            mySqlConn = ConnHelper.Connect();
         }
 
         public void Start()
@@ -53,11 +58,18 @@ namespace GameServer.Servers
 
         private void Close()
         {
+            ConnHelper.CloseConnection(mySqlConn);
             if (clientSocket != null)
             {
                 clientSocket.Close();
             }
             server.RemoveClient(this);
+        }
+
+        public void Send(RequestCode requestCode, string data)
+        {
+            byte[] bytes = Message.PackData(requestCode, data);
+            clientSocket.Send(bytes);
         }
     }
 }
