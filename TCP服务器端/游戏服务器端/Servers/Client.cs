@@ -17,6 +17,11 @@ namespace GameServer.Servers
         private Message msg=new Message();
         private MySqlConnection mySqlConn;
 
+        public MySqlConnection MySqlConn
+        {
+            get { return mySqlConn; }
+        }
+
         public Client() { }
 
         public Client(Socket clientSocket,Server server)
@@ -66,9 +71,9 @@ namespace GameServer.Servers
             server.RemoveClient(this);
         }
 
-        public void Send(RequestCode requestCode, string data)
+        public void Send(ActionCode actionCode, string data)
         {
-            byte[] bytes = Message.PackData(requestCode, data);
+            byte[] bytes = Message.PackData(actionCode, data);
             clientSocket.Send(bytes);
         }
     }

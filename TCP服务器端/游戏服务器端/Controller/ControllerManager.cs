@@ -23,6 +23,7 @@ namespace GameServer.Controller
         {
             DefaultController defaultController=new DefaultController();
             controllerDict.Add(defaultController.RequestCode,defaultController);
+            controllerDict.Add(RequestCode.User,new UserController());
         }
 
         public void HandleRequest(RequestCode requestCode,ActionCode actionCode,string data,Client client)
@@ -46,7 +47,7 @@ namespace GameServer.Controller
             {
                 return;
             }
-            server.SendResponse(client,requestCode,o as string);
+            server.SendResponse(client,actionCode,o as string);
         }
     }
 }
